@@ -1,0 +1,41 @@
+<div class="form-submit-container">
+    <div>
+        <h1 class="big-title">Opitco</h1>
+    </div>
+    <div class="small-title">
+        Crypto profit calculator powered by 
+        <img class="frame"  width="100" src="../../assets/indodax-logo-2020.svg" />
+    </div>
+    <div style="text-align: center;">
+        <h3>
+            Saldo {{ saldo }}
+        </h3>
+    </div>
+    <div  v-for="(form, index) of calcForms" :form="form" :index="index" :key="index">
+        <div class="form-container">
+            <div>
+                <input type="text" placeholder="Price" v-model="form.price" />
+            </div>
+            <div>
+                <select v-model="form.action">
+                    <option value="buy">buy</option>
+                    <option value="sell">sell</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" placeholder="Ammount" v-model="form.ammount" />
+            </div>
+            <div>
+                <button class="custom-btn" v-if="calcForms.length < 15" @click="addRow">+</button>
+            </div>
+            <div>
+                <button class="custom-btn" v-if="calcForms.length > 1" @click="removeRow(index)">-</button>
+            </div>
+        </div>
+    </div>
+    
+    <div style="text-align: center; padding-top: 15px;">
+        <button class="calc-btn" @click="doCalc">Hitung</button>
+    </div>
+    
+</div>

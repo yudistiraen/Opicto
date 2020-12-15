@@ -1,0 +1,63 @@
+@import '../../assets/styles/variable.css';
+
+.form-submit-container {
+    padding: 30px;
+}
+.big-title {
+    font-size: 3rem;
+    font-family: Poppins,sans-serif;
+}
+.small-title {
+    font-size: 1rem;
+    font-family: Poppins,sans-serif;
+    align-items: center;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    flex-flow: row wrap;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.form-container > div {
+  margin-right: 15px;
+  /* flex-basis: 20%; */
+  text-align: center;
+  font-size: 30px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--skyDark);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Poppins,sans-serif;
+  font-size: 14px;
+}
+
+.custom-btn {
+    font-family: Poppins,sans-serif;
+    font-size: 15px;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 7px 15px;
+    border: 1px solid var(--skyDark);
+    color: var(--inkLight);
+    cursor:pointer;
+}
+
+
+.calc-btn {
+    font-family: Poppins,sans-serif;
+    font-size: 20px;
+    background-color: var(--indodaxBlue);
+    border-radius: 5px;
+    padding: 15px 35px 15px 35px;
+    border: 1px solid var(--white) !important;
+    color: var(--white);
+    cursor:pointer;
+}
