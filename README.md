@@ -1,8 +1,14 @@
-# opitco
+# Opitco
 
 ## Build Setup
 
 ```bash
+# clonning project
+$ git clone https://github.com/yudistiraen/Opicto.git
+
+# move to project
+$ cd Opicto
+
 # install dependencies
 $ yarn install
 
