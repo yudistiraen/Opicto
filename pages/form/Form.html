@@ -6,27 +6,29 @@
         Crypto profit calculator powered by 
         <img class="frame"  width="100" src="../../assets/indodax-logo-2020.svg" />
     </div>
-    <div style="text-align: center;">
+    <div class="saldo-container">
         <h3>
-            Saldo {{ saldo }}
+            Saldo 
         </h3>
+        <input type="text" placeholder="Saldo" :value="saldo" @input="changeSaldo($event)" />
     </div>
-    <div  v-for="(form, index) of calcForms" :form="form" :index="index" :key="index">
+    <div  v-for="(form, index) in calcForms" :index="index" :key="index">
         <div class="form-container">
             <div>
-                <input type="text" placeholder="Price" v-model="form.price" />
+                <input type="text" placeholder="Price" v-model="form.price" @input="changePrice($event, index)" />
             </div>
             <div>
-                <select v-model="form.action">
-                    <option value="buy">buy</option>
-                    <option value="sell">sell</option>
+                <select v-model="calcForms[index].action" @change="changeAction($event, index)">
+                    <option disabled value="">Action</option>
+                    <option value="buy">Buy</option>
+                    <option value="sell">Sell</option>
                 </select>
             </div>
             <div>
-                <input type="text" placeholder="Ammount" v-model="form.ammount" />
+                <input type="text" placeholder="Ammount" v-model="form.ammount" @input="changeAmmount($event, index)"/>
             </div>
             <div>
-                <button class="custom-btn" v-if="calcForms.length < 15" @click="addRow">+</button>
+                <button class="custom-btn" v-if="calcForms.length < 15" @click="addNewRow">+</button>
             </div>
             <div>
                 <button class="custom-btn" v-if="calcForms.length > 1" @click="removeRow(index)">-</button>
