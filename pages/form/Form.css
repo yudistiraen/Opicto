@@ -3,6 +3,17 @@
 .form-submit-container {
     padding: 30px;
 }
+.saldo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saldo-container > input {
+    width: 5% !important;
+    margin-left: 10px !important;
+}
+
 .big-title {
     font-size: 3rem;
     font-family: Poppins,sans-serif;
@@ -15,14 +26,11 @@
 .form-container {
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
     flex-flow: row wrap;
     align-items: center;
-    /* justify-content: space-between; */
 }
 .form-container > div {
   margin-right: 15px;
-  /* flex-basis: 20%; */
   text-align: center;
   font-size: 30px;
 }
