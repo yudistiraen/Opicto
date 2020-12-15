@@ -1,0 +1,44 @@
+<div class="summary-container">
+    <h1>Summary</h1>
+    <table id="customers">
+        <thead>
+            <tr>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Action
+                </th>
+                <th>
+                    Amount
+                </th>
+                <th>
+                    Total
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(summary) of calcSummaries">
+                <td>
+                    {{summary.price}}
+                </td>
+                <td>
+                    {{summary.action}}
+                </td>
+                <td>
+                    {{summary.ammount}}
+                </td>
+                <td>
+                    {{summary.price * summary.ammount}}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border-bottom-color: #ffffff; border-left-color: #ffffff ;"></td>
+                <td class="profit">Profit</td>
+                <td class="profit">{{summary}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="back-btn" @click="back">Kembali</button>
+   
+</div>
